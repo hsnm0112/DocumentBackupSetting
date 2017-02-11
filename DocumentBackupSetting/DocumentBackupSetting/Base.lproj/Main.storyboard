@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zfq-wC-9Ch">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5ys-CL-flK">
+            <objects>
+                <viewController id="zfq-wC-9Ch" customClass="ViewController" customModule="DocumentBackupSetting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J3v-XQ-uuE"/>
+                        <viewControllerLayoutGuide type="bottom" id="vUQ-lf-BI5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HXE-wC-A2p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1Z-zH-c1O">
+                                <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.94562794319999999" green="0.77253843069999995" blue="0.51121330139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WNn-NG-SPK"/>
+                                </constraints>
+                                <state key="normal" title="Realmに保存"/>
+                                <connections>
+                                    <action selector="didTapAddRealmButton:" destination="zfq-wC-9Ch" eventType="touchUpInside" id="Zxo-Hw-2ye"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enl-kx-AVl">
+                                <rect key="frame" x="16" y="66" width="349" height="581"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="vTw-Lx-DxI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="v1Z-zH-c1O" firstAttribute="top" secondItem="J3v-XQ-uuE" secondAttribute="bottom" constant="8" id="5RU-xH-pKj"/>
+                            <constraint firstAttribute="trailing" secondItem="enl-kx-AVl" secondAttribute="trailing" constant="10" id="RlV-Lr-XR3"/>
+                            <constraint firstAttribute="trailing" secondItem="v1Z-zH-c1O" secondAttribute="trailing" constant="16" id="a8W-OI-YBq"/>
+                            <constraint firstItem="vUQ-lf-BI5" firstAttribute="top" secondItem="enl-kx-AVl" secondAttribute="bottom" constant="20" id="d8L-uP-e1W"/>
+                            <constraint firstItem="enl-kx-AVl" firstAttribute="top" secondItem="v1Z-zH-c1O" secondAttribute="bottom" constant="8" id="sLN-qy-fSb"/>
+                            <constraint firstItem="v1Z-zH-c1O" firstAttribute="leading" secondItem="HXE-wC-A2p" secondAttribute="leading" constant="16" id="v1Q-lD-8dS"/>
+                            <constraint firstItem="enl-kx-AVl" firstAttribute="leading" secondItem="HXE-wC-A2p" secondAttribute="leading" constant="16" id="x2l-FG-J12"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="enl-kx-AVl" id="aHL-Cu-jUz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9d-C1-Y8x" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
